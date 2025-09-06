@@ -5,24 +5,23 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import { Providers } from "./providers"
 
 export const metadata: Metadata = {
-  title: "SyncUp - Inclusive Menstrual Health Tracking",
-  description:
-    "Personalized cycle tracking and wellness support for everyone. Designed for irregular cycles, health conditions, and neurodivergent needs.",
+  title: "SyncUp - Personalized Menstrual Health Tracking",
+  description: "SyncUp is a personalized menstrual health tracking app designed for irregular cycles, health conditions, and neurodivergent needs.",
   generator: "v0.app",
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
