@@ -148,10 +148,10 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-primary-foreground mb-4">SyncUp</h3>
           <p className="text-primary-foreground/80 mb-6 text-balance">
-            Inclusive menstrual health tracking for everyone. Built with care, designed for diversity.
+          Hello world, here at team SyncUp because I was tired of juggling 6 apps and still not finding answers. We’re building this together  and your signup shapes the future
           </p>
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 SyncUp. Empowering health journeys, one cycle at a time.
+            © 2025 SyncUp. Empowering health journeys, one cycle at a time.
           </p>
         </div>
       </footer>
