@@ -38,35 +38,44 @@
   --sidebar-accent-foreground: oklch(0.25 0.01 210);
   --sidebar-border: oklch(0.92 0.01 210);
   --sidebar-ring: oklch(0.45 0.15 142);
+
+  /* Add smooth transitions for dark mode */
+  color-scheme: light;
+  --transition-duration: 0.3s;
 }
 
 .dark {
-  --background: oklch(0.12 0.01 210); /* Dark background */
-  --foreground: oklch(0.98 0.01 142); /* Light text */
-  --card: oklch(0.15 0.01 210); /* Slightly lighter dark for cards */
-  --card-foreground: oklch(0.98 0.01 142); /* Light text on cards */
-  --popover: oklch(0.15 0.01 210);
+  --background: oklch(0.1 0.01 240); /* Darker background */
+  --foreground: oklch(0.98 0.01 142); /* Brighter text */
+  --card: oklch(0.13 0.01 240); /* Slightly lighter than background */
+  --card-foreground: oklch(0.98 0.01 142);
+  --popover: oklch(0.13 0.01 240);
   --popover-foreground: oklch(0.98 0.01 142);
-  --primary: oklch(0.55 0.15 142); /* Vibrant green in dark mode */
-  --primary-foreground: oklch(0.12 0.01 210);
-  --secondary: oklch(0.65 0.18 110); /* Bright green accent */
-  --secondary-foreground: oklch(0.12 0.01 210);
-  --muted: oklch(0.18 0.01 210); /* Dark muted background */
-  --muted-foreground: oklch(0.65 0.01 210); /* Medium gray muted text */
-  --accent: oklch(0.65 0.18 110);
-  --accent-foreground: oklch(0.12 0.01 210);
-  --destructive: oklch(0.55 0.15 45); /* Warm amber for warnings */
+  --primary: oklch(0.6 0.18 142); /* Brighter primary */
+  --primary-foreground: oklch(0.98 0.01 142);
+  --secondary: oklch(0.2 0.05 240); /* More contrast for secondary */
+  --secondary-foreground: oklch(0.98 0.01 142);
+  --muted: oklch(0.2 0.02 240);
+  --muted-foreground: oklch(0.75 0.01 142); /* Better visibility */
+  --accent: oklch(0.2 0.05 240);
+  --accent-foreground: oklch(0.98 0.01 142);
+  --destructive: oklch(0.65 0.15 25); /* Adjusted destructive */
   --destructive-foreground: oklch(0.98 0.01 142);
-  --border: oklch(0.18 0.01 210); /* Darker borders */
-  --input: oklch(0.18 0.01 210);
-  --ring: oklch(0.55 0.15 142);
+  --border: oklch(0.2 0.01 240); /* Better border visibility */
+  --input: oklch(0.15 0.01 240);
+  --ring: oklch(0.6 0.18 142); /* Match primary */
   
-  /* Updated chart colors for dark mode */
-  --chart-1: oklch(0.65 0.18 110); /* Bright green */
-  --chart-2: oklch(0.55 0.15 45);  /* Amber */
-  --chart-3: oklch(0.55 0.15 142); /* Primary green */
-  --chart-4: oklch(0.18 0.01 210); /* Dark background */
-  --chart-5: oklch(0.98 0.01 142); /* Light text */
+  /* Update sidebar dark mode colors */
+  --sidebar: oklch(0.09 0.01 240); /* Even darker for sidebar */
+  --sidebar-foreground: oklch(0.98 0.01 142);
+  --sidebar-primary: oklch(0.6 0.18 142);
+  --sidebar-primary-foreground: oklch(0.98 0.01 142);
+  --sidebar-accent: oklch(0.2 0.05 240);
+  --sidebar-accent-foreground: oklch(0.98 0.01 142);
+  --sidebar-border: oklch(0.2 0.01 240);
+  --sidebar-ring: oklch(0.6 0.18 142);
+
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -113,16 +122,18 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    transition: border-color var(--transition-duration) ease-in-out, background-color var(--transition-duration) ease-in-out;
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
   }
 }
 
 /* Added smooth animations and transitions for better UX */
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
   .animate-slide-up {
@@ -134,127 +145,24 @@
   }
 
   .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-  }
-
-  .animate-width-expand {
-    animation: widthExpand 0.8s ease-out forwards;
-  }
-
-  .animate-pulse-slow {
-    animation: pulseSlow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-pulse-subtle {
-    animation: pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-gradient-x {
-    background-size: 200% 100%;
-    animation: gradientX 4s ease infinite;
-  }
-
-  .animate-typing-effect {
-    animation: typing 3.5s steps(40, end);
-  }
-
-  .animate-slide-right {
-    animation: slideRight 0.8s ease-out forwards;
-  }
-
-  .animate-slide-left {
-    animation: slideLeft 0.8s ease-out forwards;
-  }
-
-  .animate-bounce {
-    animation: bounce 2s infinite;
-  }
-
-  /* Dark mode animations */
-  .dark .animate-dark-glow {
-    animation: darkGlow 3s ease-in-out infinite;
-  }
-  
-  .dark .animate-dark-pulse {
-    animation: darkPulse 2s ease-in-out infinite;
-  }
-  
-  .dark .animate-dark-shimmer {
-    background: linear-gradient(
-      90deg, 
-      rgba(225, 155, 240, 0), 
-      rgba(225, 155, 240, 0.1), 
-      rgba(225, 155, 240, 0)
-    );
-    background-size: 200% 100%;
-    animation: darkShimmer 3s infinite;
-  }
-  
-  .dark .animate-dark-float {
-    animation: darkFloat 6s ease-in-out infinite;
-  }
-  
-  .dark .animate-dark-width-expand {
-    animation: darkWidthExpand 1s ease-out forwards;
-  }
-  
-  /* Dark mode specific styles */
-  .dark .bg-gradient-dark {
-    background: linear-gradient(135deg, 
-      oklch(0.18 0.01 210) 0%, 
-      oklch(0.15 0.05 210) 50%,
-      oklch(0.18 0.01 210) 100%
-    );
-  }
-  
-  .dark .card-glow {
-    box-shadow: 0 0 10px rgba(225, 155, 240, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .dark .card-glow:hover {
-    box-shadow: 0 0 20px rgba(225, 155, 240, 0.2);
-  }
-  
-  .dark .progress-bar-shine {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .dark .progress-bar-shine::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-      90deg, 
-      transparent, 
-      rgba(255, 255, 255, 0.1), 
-      transparent
-    );
-    animation: darkShimmer 2s infinite;
+    animation: float 3s ease-in-out infinite;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(40px);
     }
     to {
       opacity: 1;
@@ -274,164 +182,12 @@
   }
 
   @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+    0%,
     100% {
       transform: translateY(0px);
     }
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
     50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  @keyframes widthExpand {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  @keyframes pulseSlow {
-    0%, 100% {
-      opacity: 0.4;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.6;
-      transform: scale(1.05);
-    }
-  }
-
-  @keyframes pulseSubtle {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.03);
-    }
-  }
-
-  @keyframes gradientX {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  @keyframes slideRight {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideLeft {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
       transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    }
-  }
-
-  /* Dark mode specific animations */
-  @keyframes darkGlow {
-    0%, 100% {
-      box-shadow: 0 0 5px rgba(225, 155, 240, 0.3);
-    }
-    50% {
-      box-shadow: 0 0 15px rgba(225, 155, 240, 0.6);
-    }
-  }
-
-  @keyframes darkPulse {
-    0%, 100% {
-      background-color: color-mix(in oklab, var(--primary) 20%, transparent);
-    }
-    50% {
-      background-color: color-mix(in oklab, var(--primary) 30%, transparent);
-    }
-  }
-
-  @keyframes darkShimmer {
-    0% {
-      background-position: -100% 0;
-    }
-    100% {
-      background-position: 200% 0;
-    }
-  }
-
-  @keyframes darkFloat {
-    0% {
-      transform: translateY(0px);
-      filter: drop-shadow(0 0 2px rgba(225, 155, 240, 0.2));
-    }
-    50% {
-      transform: translateY(-15px);
-      filter: drop-shadow(0 0 8px rgba(225, 155, 240, 0.4));
-    }
-    100% {
-      transform: translateY(0px);
-      filter: drop-shadow(0 0 2px rgba(225, 155, 240, 0.2));
-    }
-  }
-
-  @keyframes darkWidthExpand {
-    from {
-      width: 0;
-      box-shadow: 0 0 0 rgba(225, 155, 240, 0);
-    }
-    to {
-      width: 100%;
-      box-shadow: 0 0 10px rgba(225, 155, 240, 0.3);
     }
   }
 }

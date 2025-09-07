@@ -74,11 +74,11 @@ export function WaitlistForm() {
 
   if (isSuccess) {
     return (
-      <Card className="w-full max-w-md mx-auto bg-gradient-to-br from-rose-50 to-pink-50 border-rose-200">
+      <Card className="w-full max-w-md mx-auto bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
         <CardContent className="p-8 text-center">
-          <CheckCircle className="w-16 h-16 text-rose-500 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-rose-900 mb-2">Welcome to SyncUp!</h3>
-          <p className="text-rose-700 text-balance">
+          <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-foreground mb-2">Welcome to SyncUp!</h3>
+          <p className="text-muted-foreground text-balance">
             Thank you for joining our waitlist. We'll notify you as soon as SyncUp is ready to support your health
             journey.
           </p>
@@ -88,12 +88,12 @@ export function WaitlistForm() {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto bg-white/80 backdrop-blur-sm border-rose-200">
+    <Card className="w-full max-w-md mx-auto bg-card/80 backdrop-blur-sm border-border">
       <CardContent className="p-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-4">
             <div>
-              <Label htmlFor="email" className="text-rose-900 font-medium">
+              <Label htmlFor="email" className="text-foreground font-medium">
                 Email Address *
               </Label>
               <Input
@@ -102,13 +102,13 @@ export function WaitlistForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="mt-1 border-rose-200 focus:border-rose-400 focus:ring-rose-400"
+                className="mt-1 border-border focus:border-primary focus:ring-primary"
                 placeholder="your@email.com"
               />
             </div>
 
             <div>
-              <Label htmlFor="name" className="text-rose-900 font-medium">
+              <Label htmlFor="name" className="text-foreground font-medium">
                 Name (Optional)
               </Label>
               <Input
@@ -116,13 +116,13 @@ export function WaitlistForm() {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mt-1 border-rose-200 focus:border-rose-400 focus:ring-rose-400"
+                className="mt-1 border-border focus:border-primary focus:ring-primary"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <Label className="text-rose-900 font-medium mb-3 block">Health considerations (Optional)</Label>
+              <Label className="text-foreground font-medium mb-3 block">Health considerations (Optional)</Label>
               <div className="grid grid-cols-1 gap-2 max-h-32 overflow-y-auto">
                 {healthConditions.map((condition) => (
                   <div key={condition} className="flex items-center space-x-2">
@@ -136,9 +136,9 @@ export function WaitlistForm() {
                           setSelectedConditions(selectedConditions.filter((c) => c !== condition))
                         }
                       }}
-                      className="border-rose-300 data-[state=checked]:bg-rose-500"
+                      className="border-border data-[state=checked]:bg-primary"
                     />
-                    <Label htmlFor={condition} className="text-sm text-rose-800 cursor-pointer">
+                    <Label htmlFor={condition} className="text-sm text-muted-foreground cursor-pointer">
                       {condition}
                     </Label>
                   </div>
@@ -147,7 +147,7 @@ export function WaitlistForm() {
             </div>
 
             <div>
-              <Label className="text-rose-900 font-medium mb-3 block">Features you're most interested in</Label>
+              <Label className="text-foreground font-medium mb-3 block">Features you're most interested in</Label>
               <div className="grid grid-cols-1 gap-2 max-h-32 overflow-y-auto">
                 {features.map((feature) => (
                   <div key={feature} className="flex items-center space-x-2">
@@ -161,9 +161,9 @@ export function WaitlistForm() {
                           setSelectedFeatures(selectedFeatures.filter((f) => f !== feature))
                         }
                       }}
-                      className="border-rose-300 data-[state=checked]:bg-rose-500"
+                      className="border-border data-[state=checked]:bg-primary"
                     />
-                    <Label htmlFor={feature} className="text-sm text-rose-800 cursor-pointer">
+                    <Label htmlFor={feature} className="text-sm text-muted-foreground cursor-pointer">
                       {feature}
                     </Label>
                   </div>
@@ -172,12 +172,16 @@ export function WaitlistForm() {
             </div>
           </div>
 
-          {error && <p className="text-red-600 text-sm bg-red-50 p-3 rounded-md border border-red-200">{error}</p>}
+          {error && (
+            <p className="text-destructive text-sm bg-destructive/10 p-3 rounded-md border border-destructive/20">
+              {error}
+            </p>
+          )}
 
           <Button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-rose-600 hover:bg-rose-700 text-white font-medium py-3 transition-colors"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 transition-colors"
           >
             {isLoading ? (
               <>

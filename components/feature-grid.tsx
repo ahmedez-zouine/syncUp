@@ -56,17 +56,17 @@ export function FeatureGrid() {
       {features.map((feature, index) => (
         <Card
           key={feature.title}
-          className="group hover:shadow-lg transition-all duration-300 border-rose-100 hover:border-rose-200 bg-white/60 backdrop-blur-sm"
+          className="group hover:shadow-lg transition-all duration-300 border-border hover:border-primary/30 bg-card/60 backdrop-blur-sm"
           style={{
             animationDelay: `${index * 100}ms`,
           }}
         >
           <CardContent className="p-6 text-center">
-            <div className="w-12 h-12 mx-auto mb-4 bg-rose-100 rounded-full flex items-center justify-center group-hover:bg-rose-200 transition-colors">
-              <feature.icon className="w-6 h-6 text-rose-600" />
+            <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <feature.icon className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-semibold text-rose-900 mb-2 text-balance">{feature.title}</h3>
-            <p className="text-sm text-rose-700 text-balance leading-relaxed">{feature.description}</p>
+            <h3 className="font-semibold text-foreground mb-2 text-balance">{feature.title}</h3>
+            <p className="text-sm text-muted-foreground text-balance leading-relaxed">{feature.description}</p>
           </CardContent>
         </Card>
       ))}
