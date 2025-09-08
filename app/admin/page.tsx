@@ -51,7 +51,7 @@ export default async function AdminPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 to-pink-50 p-6">
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">SyncUp Waitlist Dashboard</h1>
