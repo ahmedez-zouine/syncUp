@@ -134,7 +134,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background dark:bg-background">
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
 
       {/* Mobile-optimized Hero Section */}
       <section className="relative px-4 sm:px-6 pt-12 sm:pt-16 pb-16 sm:pb-24 text-center overflow-hidden">
