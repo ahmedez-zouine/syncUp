@@ -4,76 +4,77 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated to health-focused green color palette */
-  --background: oklch(0.98 0.02 142); /* Light green background #f0fdf4 */
-  --foreground: oklch(0.25 0.01 210); /* Dark gray text #374151 */
-  --card: oklch(1 0 0); /* White cards */
-  --card-foreground: oklch(0.25 0.01 210); /* Dark gray card text */
-  --popover: oklch(1 0 0); /* White popover */
-  --popover-foreground: oklch(0.25 0.01 210); /* Dark gray popover text */
-  --primary: oklch(0.45 0.15 142); /* Green-700 primary #15803d */
+  /* Enhanced feminine color palette - Soft Rose & Lavender */
+  --background: oklch(0.99 0.01 340); /* Soft rose-white #fefcfd */
+  --foreground: oklch(0.25 0.04 320); /* Deep plum text #2a1a2e */
+  --card: oklch(1 0 0); /* Pure white cards */
+  --card-foreground: oklch(0.25 0.04 320); /* Deep plum card text */
+  --popover: oklch(1 0 0); /* Pure white popover */
+  --popover-foreground: oklch(0.25 0.04 320); /* Deep plum popover text */
+  --primary: oklch(0.65 0.20 330); /* Elegant rose-purple #c084fc */
   --primary-foreground: oklch(1 0 0); /* White text on primary */
-  --secondary: oklch(0.75 0.18 110); /* Bright green accent #84cc16 */
-  --secondary-foreground: oklch(0.25 0.01 210); /* Dark gray secondary text */
-  --muted: oklch(0.96 0.02 142); /* Light green muted */
-  --muted-foreground: oklch(0.45 0.01 210); /* Medium gray muted text */
-  --accent: oklch(0.75 0.18 110); /* Bright green accent */
+  --secondary: oklch(0.92 0.08 340); /* Soft blush #f8f0f7 */
+  --secondary-foreground: oklch(0.25 0.04 320); /* Deep plum secondary text */
+  --muted: oklch(0.97 0.02 340); /* Very light rose #fcf9fb */
+  --muted-foreground: oklch(0.50 0.03 320); /* Medium purple-gray muted text */
+  --accent: oklch(0.70 0.25 350); /* Vibrant pink accent #ec4899 */
   --accent-foreground: oklch(1 0 0); /* White accent text */
-  --destructive: oklch(0.65 0.15 45); /* Amber-600 for warnings #d97706 */
+  --destructive: oklch(0.65 0.20 15); /* Warm coral for warnings #f87171 */
   --destructive-foreground: oklch(1 0 0); /* White destructive text */
-  --border: oklch(0.92 0.01 210); /* Light gray borders #e5e7eb */
+  --border: oklch(0.94 0.03 340); /* Light rose borders #f5e7f3 */
   --input: oklch(1 0 0); /* White input fields */
-  --ring: oklch(0.45 0.15 142); /* Green focus ring */
-  --chart-1: oklch(0.75 0.18 110); /* Bright green for charts */
-  --chart-2: oklch(0.65 0.15 45); /* Amber for warnings */
-  --chart-3: oklch(0.45 0.15 142); /* Primary green */
-  --chart-4: oklch(0.96 0.02 142); /* Light green neutral */
-  --chart-5: oklch(0.25 0.01 210); /* Dark gray */
-  --radius: 0.5rem; /* Softer rounded corners */
+  --ring: oklch(0.65 0.20 330); /* Rose-purple focus ring */
+  --chart-1: oklch(0.70 0.25 350); /* Vibrant pink for charts */
+  --chart-2: oklch(0.65 0.20 330); /* Rose-purple */
+  --chart-3: oklch(0.75 0.15 310); /* Soft lavender */
+  --chart-4: oklch(0.85 0.10 340); /* Light blush */
+  --chart-5: oklch(0.55 0.18 320); /* Medium purple */
+  --radius: 0.75rem; /* Softer, more feminine rounded corners */
   --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.25 0.01 210);
-  --sidebar-primary: oklch(0.45 0.15 142);
+  --sidebar-foreground: oklch(0.25 0.04 320);
+  --sidebar-primary: oklch(0.65 0.20 330);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.75 0.18 110);
-  --sidebar-accent-foreground: oklch(0.25 0.01 210);
-  --sidebar-border: oklch(0.92 0.01 210);
-  --sidebar-ring: oklch(0.45 0.15 142);
+  --sidebar-accent: oklch(0.92 0.08 340);
+  --sidebar-accent-foreground: oklch(0.25 0.04 320);
+  --sidebar-border: oklch(0.94 0.03 340);
+  --sidebar-ring: oklch(0.65 0.20 330);
 
-  /* Add smooth transitions for dark mode */
+  /* Smooth feminine transitions */
   color-scheme: light;
-  --transition-duration: 0.3s;
+  --transition-duration: 0.4s; /* Slightly longer for elegance */
 }
 
 .dark {
-  --background: oklch(0.1 0.01 240); /* Darker background */
-  --foreground: oklch(0.98 0.01 142); /* Brighter text */
-  --card: oklch(0.13 0.01 240); /* Slightly lighter than background */
-  --card-foreground: oklch(0.98 0.01 142);
-  --popover: oklch(0.13 0.01 240);
-  --popover-foreground: oklch(0.98 0.01 142);
-  --primary: oklch(0.6 0.18 142); /* Brighter primary */
-  --primary-foreground: oklch(0.98 0.01 142);
-  --secondary: oklch(0.2 0.05 240); /* More contrast for secondary */
-  --secondary-foreground: oklch(0.98 0.01 142);
-  --muted: oklch(0.2 0.02 240);
-  --muted-foreground: oklch(0.75 0.01 142); /* Better visibility */
-  --accent: oklch(0.2 0.05 240);
-  --accent-foreground: oklch(0.98 0.01 142);
-  --destructive: oklch(0.65 0.15 25); /* Adjusted destructive */
-  --destructive-foreground: oklch(0.98 0.01 142);
-  --border: oklch(0.2 0.01 240); /* Better border visibility */
-  --input: oklch(0.15 0.01 240);
-  --ring: oklch(0.6 0.18 142); /* Match primary */
+  /* Elegant dark feminine theme */
+  --background: oklch(0.08 0.02 320); /* Deep purple-black #0d0612 */
+  --foreground: oklch(0.95 0.02 340); /* Soft rose-white text #fef7ff */
+  --card: oklch(0.12 0.03 320); /* Dark purple card background #1a0e24 */
+  --card-foreground: oklch(0.95 0.02 340);
+  --popover: oklch(0.12 0.03 320);
+  --popover-foreground: oklch(0.95 0.02 340);
+  --primary: oklch(0.75 0.22 330); /* Bright rose-purple primary #d946ef */
+  --primary-foreground: oklch(0.95 0.02 340);
+  --secondary: oklch(0.18 0.04 320); /* Dark purple secondary */
+  --secondary-foreground: oklch(0.95 0.02 340);
+  --muted: oklch(0.15 0.03 320);
+  --muted-foreground: oklch(0.75 0.04 340); /* Better visibility in dark mode */
+  --accent: oklch(0.75 0.28 350); /* Bright pink accent */
+  --accent-foreground: oklch(0.95 0.02 340);
+  --destructive: oklch(0.75 0.22 15); /* Brighter coral in dark mode */
+  --destructive-foreground: oklch(0.95 0.02 340);
+  --border: oklch(0.20 0.03 320); /* Better border visibility */
+  --input: oklch(0.15 0.02 320);
+  --ring: oklch(0.75 0.22 330); /* Match primary */
   
   /* Update sidebar dark mode colors */
-  --sidebar: oklch(0.09 0.01 240); /* Even darker for sidebar */
-  --sidebar-foreground: oklch(0.98 0.01 142);
-  --sidebar-primary: oklch(0.6 0.18 142);
-  --sidebar-primary-foreground: oklch(0.98 0.01 142);
-  --sidebar-accent: oklch(0.2 0.05 240);
-  --sidebar-accent-foreground: oklch(0.98 0.01 142);
-  --sidebar-border: oklch(0.2 0.01 240);
-  --sidebar-ring: oklch(0.6 0.18 142);
+  --sidebar: oklch(0.08 0.02 320);
+  --sidebar-foreground: oklch(0.95 0.02 340);
+  --sidebar-primary: oklch(0.75 0.22 330);
+  --sidebar-primary-foreground: oklch(0.95 0.02 340);
+  --sidebar-accent: oklch(0.18 0.04 320);
+  --sidebar-accent-foreground: oklch(0.95 0.02 340);
+  --sidebar-border: oklch(0.20 0.03 320);
+  --sidebar-ring: oklch(0.75 0.22 330);
 
   color-scheme: dark;
 }
@@ -122,36 +123,59 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    transition: border-color var(--transition-duration) ease-in-out, background-color var(--transition-duration) ease-in-out;
+    transition: border-color var(--transition-duration) ease-in-out, 
+                background-color var(--transition-duration) ease-in-out,
+                color var(--transition-duration) ease-in-out,
+                box-shadow var(--transition-duration) ease-in-out;
   }
   body {
     @apply bg-background text-foreground;
-    transition: background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+    transition: background-color var(--transition-duration) ease-in-out, 
+                color var(--transition-duration) ease-in-out;
+  }
+  
+  /* Custom scrollbar for feminine touch */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--muted);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
   }
 }
 
-/* Added smooth animations and transitions for better UX */
+/* Enhanced animations for feminine elegance */
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
+    animation: slideUp 1s ease-out forwards;
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.5s ease-out forwards;
+    animation: scaleIn 0.6s ease-out forwards;
   }
 
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(25px);
     }
     to {
       opacity: 1;
@@ -162,7 +186,7 @@
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(50px);
     }
     to {
       opacity: 1;
@@ -173,31 +197,55 @@
   @keyframes scaleIn {
     from {
       opacity: 0;
-      transform: scale(0.9);
+      transform: scale(0.9) rotate(-2deg);
     }
     to {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1) rotate(0deg);
     }
   }
 
   @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-15px) rotate(2deg);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary);
+    }
+    to {
+      box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent);
     }
   }
 
   @keyframes pulse {
-    0%, 100% { opacity: 0.6; }
+    0%, 100% { opacity: 0.7; }
     50% { opacity: 1; }
   }
 
   @keyframes ping {
-    0% { transform: scale(1); opacity: 0.8; }
-    75%, 100% { transform: scale(2); opacity: 0; }
+    0% { transform: scale(1); opacity: 0.9; }
+    75%, 100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  /* Feminine gradient utilities */
+  .gradient-rose {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+  }
+  
+  .gradient-soft {
+    background: linear-gradient(135deg, var(--secondary), var(--muted));
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
