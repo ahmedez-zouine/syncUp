@@ -169,8 +169,7 @@ export default function HomePage() {
             className="text-base sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto text-balance leading-relaxed animate-fade-in px-4"
             style={{ animationDelay: "0.2s" }}
           >
-            SyncUp is the first menstrual health app designed for everyone—supporting irregular cycles, health
-            conditions, neurodivergent needs, and cultural considerations.
+            The first hormone & cycle app that reflects real life, irregular rhythms, health conditions, neurodiversity, and cultural needs included.
           </p>
 
           {/* Mobile-optimized feature badges */}
