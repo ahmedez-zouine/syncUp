@@ -1,4 +1,4 @@
--- Create waitlist table for SyncUp app
+-- Create waitlist table for Mimaura app
 CREATE TABLE IF NOT EXISTS public.waitlist (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   email TEXT UNIQUE NOT NULL,

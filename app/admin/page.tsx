@@ -54,7 +54,7 @@ export default async function AdminPage() {
         {/* <ThemeToggle /> */}
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">SyncUp Waitlist Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Mimaura Waitlist Dashboard</h1>
           <p className="text-gray-600">Manage and view your waitlist signups</p>
         </div>
 
@@ -117,7 +117,7 @@ export default async function AdminPage() {
         <Card>
           <CardHeader>
             <CardTitle>Waitlist Entries</CardTitle>
-            <CardDescription>All users who have signed up for SyncUp</CardDescription>
+            <CardDescription>All users who have signed up for Mimaura</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">

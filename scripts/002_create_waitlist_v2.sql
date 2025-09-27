@@ -1,4 +1,4 @@
--- Create waitlist table for SyncUp app (Version 2)
+-- Create waitlist table for Mimaura app (Version 2)
 -- Drop table if exists to ensure clean creation
 DROP TABLE IF EXISTS public.waitlist;
 
