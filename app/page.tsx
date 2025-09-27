@@ -377,27 +377,6 @@ function EnhancedFooter() {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Upper footer with logo, CTA and FOMO */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
-            <MimauraLogo className="scale-125" />
-          </div>
-          
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 max-w-3xl mx-auto">
-            Ready to Transform Your Health Journey?
-          </h3>
-          
-          <div className="mb-8 max-w-lg mx-auto">
-            <Button 
-              size="lg" 
-              variant="secondary" 
-              className="w-full bg-white hover:bg-white/90 text-[#5a7849] hover:text-[#5a7849]/90 font-semibold shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
-            >
-              <Shield className="w-5 h-5 mr-3" />
-              Secure Your Early Access Now
-              <ArrowRight className="w-5 h-5 ml-3" />
-            </Button>
-          </div>
-        </div>
         
         {/* Footer content grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 border-t border-white/20">
