@@ -129,7 +129,7 @@ function LaunchCountdown() {
           Get Ready for <span className="bg-gradient-to-r from-[#8bb176] to-[#bcddb0] bg-clip-text text-transparent">Mimaura</span>
         </h3>
         <p className={`text-sm sm:text-lg text-muted-foreground mb-8 sm:mb-10 transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} px-4 max-w-2xl mx-auto`}>
-          Experience the future of personalized cycle tracking on your favorite device — <span className="font-medium text-[#5a7849]">launching {launchDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
+          Experience the future of personalized cycle tracking on your favourite device <span className="font-medium text-[#5a7849]">launching {launchDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
         </p>
         
         {/* Enhanced countdown grid with staggered animations */}
@@ -409,8 +409,8 @@ function EnhancedFooter() {
           <div>
             <h4 className="font-bold text-white mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li>hello@Mimaura.health</li>
-              <li>San Francisco, CA</li>
+              <li>hello@Mimaura.com</li>
+              <li>London, UK</li>
               <li>Privacy Policy</li>
               <li>Terms of Service</li>
             </ul>
