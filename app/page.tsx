@@ -1,5 +1,5 @@
 "use client";
-
+import { Analytics } from "@vercel/analytics/next"
 import { useState, useEffect } from "react";
 import { WaitlistForm } from "@/components/waitlist-form"
 import { FeatureGrid } from "@/components/feature-grid"
