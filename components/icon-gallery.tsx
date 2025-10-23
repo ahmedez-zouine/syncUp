@@ -126,7 +126,7 @@ export function IconGallery() {
 								{/* Auto-play indicator */}
 								<div 
 									className={`ml-3 flex items-center gap-1 text-xs text-[#4a3968]/70 dark:text-[#b39ddb]/70 transition-opacity ${isAutoPlaying ? 'opacity-100' : 'opacity-0'}`}
-									onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+									onClick={() => setIsAutoPlaying(true)}
 								>
 									<div className="w-1.5 h-1.5 rounded-full bg-[#7e57c2] dark:bg-[#9575cd] animate-pulse"></div>
 									<span>Auto</span>
