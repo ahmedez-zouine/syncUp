@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 // Define the app icons data with their emotions/actions
 const appIcons = [
 	{
-		src: "like.png",
+		src: "what.png",
 		alt: "Mimaura Mascot with Arms Crossed",
 		emotion: "Confident",
 		description: "Your supportive companion showing confidence throughout your health journey",
@@ -25,7 +25,7 @@ const appIcons = [
 		darkColor: "dark:from-[#9575cd]/40 dark:to-[#673ab7]/40",
 	},
 	{
-		src: "what.png",
+		src: "like.png",
 		alt: "Mimaura Mascot with Thumbs Up",
 		emotion: "Supportive",
 		description: "Always there to provide encouragement and positive reinforcement",
