@@ -56,7 +56,7 @@ export function IconGallery() {
 	// Stop auto-play when user interacts
 	const handleIconSelect = (index: number) => {
 		setSelectedIcon(index);
-		setIsAutoPlaying(false);
+		setIsAutoPlaying(true);
 	};
 
 	if (!mounted) return null;
