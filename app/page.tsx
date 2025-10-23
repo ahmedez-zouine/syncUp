@@ -16,7 +16,9 @@ import Image from "next/image";
 
 // Enhanced countdown component with better animations and UI
 function LaunchCountdown() {
-  const launchDate = new Date(new Date().setMonth(new Date().getMonth() + 3));
+  // Set a fixed launch date instead of calculating it dynamically on each render
+  // This ensures the countdown is consistent and doesn't reset
+  const launchDate = new Date("2025-12-11T12:00:00"); // Example: October 15, 2024
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -31,7 +33,7 @@ function LaunchCountdown() {
   useEffect(() => {
     setMounted(true);
     const calculateTimeLeft = () => {
-      const difference = +launchDate - +new Date();
+      const difference = + launchDate - + new Date();
       
       if (difference > 0) {
         setTimeLeft({
@@ -63,6 +65,13 @@ function LaunchCountdown() {
 
   if (!mounted) return null;
   
+  // Format the launch date for display
+  const formattedLaunchDate = launchDate.toLocaleDateString('en-US', { 
+    month: 'long',
+    day: 'numeric', 
+    year: 'numeric' 
+  });
+  
   return (
     <section className="py-12 sm:py-16 bg-gradient-to-br from-[#a88bda]/30 via-[#7e57c2]/20 to-transparent dark:from-[#4a3968]/40 dark:via-[#2d1b4e]/30 dark:to-transparent backdrop-blur-sm border-y border-[#a88bda]/40 dark:border-[#a88bda]/20 relative overflow-hidden">
       {/* Enhanced animated background */}
@@ -86,12 +95,12 @@ function LaunchCountdown() {
           </Badge>
         </div>
         
-          <h3 className={`text-xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 transition-all duration-1000 delay-200 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
-            Get Ready for <span className="bg-gradient-to-r from-[#7e57c2] to-[#a88bda] dark:from-[#9575cd] dark:to-[#b39ddb] bg-clip-text text-transparent">Mimaura</span>
-          </h3>
-          <p className={`text-sm sm:text-lg text-muted-foreground mb-8 sm:mb-10 transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} px-4 max-w-2xl mx-auto`}>
-            Experience the future of personalized cycle tracking on your favourite device <span className="font-medium text-[#4a3968] dark:text-[#b39ddb]">launching {launchDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
-          </p>
+        <h3 className={`text-xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 transition-all duration-1000 delay-200 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
+          Get Ready for <span className="bg-gradient-to-r from-[#7e57c2] to-[#a88bda] dark:from-[#9575cd] dark:to-[#b39ddb] bg-clip-text text-transparent">Mimaura</span>
+        </h3>
+        <p className={`text-sm sm:text-lg text-muted-foreground mb-8 sm:mb-10 transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} px-4 max-w-2xl mx-auto`}>
+          Experience the future of personalized cycle tracking on your favourite device <span className="font-medium text-[#4a3968] dark:text-[#b39ddb]">launching {formattedLaunchDate}</span>
+        </p>
           
         {/* Enhanced countdown grid with staggered animations */}
         <div className={`grid grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-10 max-w-lg sm:max-w-2xl mx-auto transition-all duration-1000 delay-400 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
