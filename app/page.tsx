@@ -279,7 +279,7 @@ function EnhancedFooter() {
           <div>
             <h4 className="font-bold text-white mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li className="hover:text-white transition-colors duration-200"><a href="mailto:hello@Mimaura.com">hello@Mimaura.com</a></li>
+              <li className="hover:text-white transition-colors duration-200"><a href="https://www.linkedin.com/company/mimaura/">LinkedIn</a></li>
               <li>London, UK</li>
               <li className="hover:text-white transition-colors duration-200"><a href="#">Privacy Policy</a></li>
               <li className="hover:text-white transition-colors duration-200"><a href="#">Terms of Service</a></li>
