@@ -22,7 +22,7 @@ const appIcons = [
         alt: "Curious Explorer",
         emotion: "Insightful",
         context: "Discover patterns unique to your body",
-        description: "AI-powered insights that reveal your personalised cycle patterns",
+        description: "AI-powered insights that reveal your Personalised cycle patterns",
         color: "from-[#7e57c2] to-[#673ab7]",
         features: ["Smart predictions", "Pattern analysis"],
         icon: Zap,

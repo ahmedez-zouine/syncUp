@@ -29,7 +29,7 @@ const features = [
 		icon: Calendar,
 		title: "Friendly Companion",
 		description:
-			"Our purple mascot guides you through your health journey with personalised support and gentle reminders.",
+			"Our purple mascot guides you through your health journey with Personalised support and gentle reminders.",
 		gradient: "from-[#b39ddb]/80 to-[#9575cd]/80",
 		darkGradient: "dark:from-[#9575cd]/40 dark:to-[#673ab7]/40",
 		hoverEffect: "group-hover:scale-110 group-hover:rotate-3",
@@ -71,7 +71,7 @@ const features = [
 	},
 	{
 		icon: Sparkles,
-		title: "personalised Insights",
+		title: "Personalised Insights",
 		description: "Get actionable recommendations based on your unique health profile and tracking data.",
 		gradient: "from-[#673ab7]/80 to-[#7e57c2]/80",
 		darkGradient: "dark:from-[#9575cd]/40 dark:to-[#673ab7]/40",

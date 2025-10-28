@@ -99,7 +99,7 @@ function LaunchCountdown() {
           Get Ready for <span className="bg-gradient-to-r from-[#7e57c2] to-[#a88bda] dark:from-[#9575cd] dark:to-[#b39ddb] bg-clip-text text-transparent">Mimaura</span>
         </h3>
         <p className={`text-sm sm:text-lg text-muted-foreground mb-8 sm:mb-10 transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} px-4 max-w-2xl mx-auto`}>
-          Experience the future of personalised cycle tracking on your favourite device <span className="font-medium text-[#4a3968] dark:text-[#b39ddb]">launching {formattedLaunchDate}</span>
+          Experience the future of Personalised cycle tracking on your favourite device <span className="font-medium text-[#4a3968] dark:text-[#b39ddb]">launching {formattedLaunchDate}</span>
         </p>
           
         {/* Enhanced countdown grid with staggered animations */}
@@ -248,7 +248,7 @@ function EnhancedFooter() {
           <div className="md:col-span-2">
             <h4 className="font-bold text-white mb-4">About Mimaura</h4>
             <p className="text-white/80 text-sm leading-relaxed">
-              Mimaura is on a mission to revolutionize cycle tracking through personalised, inclusive technology. 
+              Mimaura is on a mission to revolutionise cycle tracking through Personalised, inclusive technology. 
               We're building an app that reflects real bodies with irregular rhythms, health conditions, and diverse needs.
             </p>
             
@@ -256,11 +256,6 @@ function EnhancedFooter() {
               <a href="https://www.linkedin.com/company/mimaura/" className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-300 hover:transform hover:scale-110">
                 <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </a>
-              <a href="https://twitter.com/Mimaura_app" className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-300 hover:transform hover:scale-110">
-                <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                 </svg>
               </a>
               <a href="https://www.instagram.com/mimaura_app?igsh=bW84d2lwaHcxOGdi" className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-300 hover:transform hover:scale-110">
@@ -379,7 +374,7 @@ export default function Home() {
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-100 mb-6 sm:mb-8 text-balance animate-slide-up leading-tight px-2">
            Track your cycle to see how it 
-            <span className="block bg-gradient-to-r from-[#7e57c2] to-[#a88bda] dark:from-[#9575cd] dark:to-[#b39ddb] bg-clip-text text-transparent mt-2">actually works.</span>
+            <span className="block bg-gradient-to-r from-[#7e57c2] to-[#a88bda] dark:from-[#9575cd] dark:to-[#b39ddb] bg-clip-text text-transparent mt-2">actually works</span>
             <span className="block text-lg sm:text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 mt-4 opacity-80">
               Not how apps think it should.
             </span>
