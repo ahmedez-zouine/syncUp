@@ -10,7 +10,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Mimaura - Inclusive Menstrual Health Tracking",
   description:
-    "Personalized cycle tracking and wellness support for everyone. Designed for irregular cycles, health conditions, and neurodivergent needs.",
+    "personalised cycle tracking and wellness support for everyone. Designed for irregular cycles, health conditions, and neurodivergent needs.",
   generator: "v0.app",
 }
 

@@ -22,7 +22,7 @@ const healthConditions = [
 ]
 
 const features = [
-	"Personalized cycle tracking",
+	"personalised cycle tracking",
 	"Symptom pattern analysis",
 	"Mental health integration",
 	"Cultural/religious considerations",

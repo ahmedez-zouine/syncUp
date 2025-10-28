@@ -99,7 +99,7 @@ function LaunchCountdown() {
           Get Ready for <span className="bg-gradient-to-r from-[#7e57c2] to-[#a88bda] dark:from-[#9575cd] dark:to-[#b39ddb] bg-clip-text text-transparent">Mimaura</span>
         </h3>
         <p className={`text-sm sm:text-lg text-muted-foreground mb-8 sm:mb-10 transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} px-4 max-w-2xl mx-auto`}>
-          Experience the future of personalized cycle tracking on your favourite device <span className="font-medium text-[#4a3968] dark:text-[#b39ddb]">launching {formattedLaunchDate}</span>
+          Experience the future of personalised cycle tracking on your favourite device <span className="font-medium text-[#4a3968] dark:text-[#b39ddb]">launching {formattedLaunchDate}</span>
         </p>
           
         {/* Enhanced countdown grid with staggered animations */}
@@ -248,7 +248,7 @@ function EnhancedFooter() {
           <div className="md:col-span-2">
             <h4 className="font-bold text-white mb-4">About Mimaura</h4>
             <p className="text-white/80 text-sm leading-relaxed">
-              Mimaura is on a mission to revolutionize cycle tracking through personalized, inclusive technology. 
+              Mimaura is on a mission to revolutionize cycle tracking through personalised, inclusive technology. 
               We're building an app that reflects real bodies with irregular rhythms, health conditions, and diverse needs.
             </p>
             
@@ -378,7 +378,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-100 mb-6 sm:mb-8 text-balance animate-slide-up leading-tight px-2">
-            Track your cycle how it 
+           Track your cycle to see how it 
             <span className="block bg-gradient-to-r from-[#7e57c2] to-[#a88bda] dark:from-[#9575cd] dark:to-[#b39ddb] bg-clip-text text-transparent mt-2">actually works.</span>
             <span className="block text-lg sm:text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 mt-4 opacity-80">
               Not how apps think it should.
@@ -389,7 +389,7 @@ export default function Home() {
             className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-balance leading-relaxed animate-fade-in px-4"
             style={{ animationDelay: "0.2s" }}
           >
-            The first hormone & cycle app that reflects <strong>real life</strong> irregular rhythms, health conditions, neurodiversity, and cultural needs included.
+            The first hormone & cycle app that reflects <strong>real life</strong> irregular rhythms, health conditions, neurodiversity, and cultural needs.
           </p>
 
           {/* Enhanced feature badges with staggered animations */}
@@ -457,17 +457,17 @@ export default function Home() {
             {[
               { 
                 stat: "73%", 
-                text: "of people with PCOS feel their cycle tracking apps don't meet their needs",
+                text: "Of people with PCOS feel their cycle tracking apps don't meet their needs",
                 color: "from-[#9575cd] to-[#7e57c2] dark:from-[#b39ddb] dark:to-[#9575cd]"
               },
               { 
                 stat: "1 in 4", 
-                text: "menstruating people have irregular cycles that standard apps can't predict",
+                text: "Menstruating people have irregular cycles that standard apps can't predict",
                 color: "from-[#7e57c2] to-[#9575cd] dark:from-[#9575cd] dark:to-[#673ab7]"
               },
               { 
                 stat: "100%", 
-                text: "impact-driven design—every feature built with real user needs in mind",
+                text: "Impact driven design every feature built with real user needs in mind",
                 color: "from-[#9575cd] to-[#b39ddb] dark:from-[#b39ddb] dark:to-[#9575cd]"
               }
             ].map((item, index) => (
